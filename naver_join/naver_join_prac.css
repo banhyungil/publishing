@@ -1,0 +1,45 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp {
+    display: flex;
+    flex-direction: column;
+    margin:10px 0;
+}
+.inp > label {
+    margin-bottom: 5px;
+}
+.inp input {
+    padding: 5px;
+    width: calc(100vw/3);
+    max-width: 400px;
+    cursor: pointer;
+}
+.inp input:focus {
+    border: solid 2px #03c75a;
+}
+
+.inp > label {
+    font-weight: 600;
+}
+
+.inp-label {
+    position: relative;
+}
+
+.inp-label > label,
+.inp-label > img {
+    position: absolute;
+    right:4px;
+    top:calc(5px/2);
+}
+
+.inp-label > img {
+    width:20px;
+}
+
+

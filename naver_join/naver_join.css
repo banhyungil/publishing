@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: none;
+}
+
+body {
+    font-size: 14px;
+    background-color: '#F5F6F7';
+    line-height: 1.5em;
+    color: #222;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Reset CSS */
+input, select {
+    cursor: pointer;
+}
+
+/* Custom Select & Number*/
+select {
+    appearance: none;
+    background: url("sel_arr_2x.gif") no-repeat center right 5px;
+    background-size: 17px;
+}
+/* hide spinner */
+/* Chrome, Safari, Edge, Opera */
+.field input[type=number]::-webkit-inner-spin-button,
+.field input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.member {
+    width: calc(100vw/3);
+    min-width: 400px; max-width: 500px;
+    margin: auto;
+    /* padding: 0 20px; */
+}
+
+/* Member Sign in */
+.member input[type=button], .member input[type=submit] {
+    background-color: #03C75A;
+    color: #FFFFE4;
+}
+
+.member .logo {
+    height: 30px;
+    display: block;
+    margin: 50px auto;
+}
+
+.member input:not(input[type=radio]):focus,
+.member select:focus {
+    border: 1px solid #03C75A;
+}
+
+.member input:not(input[type=radio]),
+.member select {
+    border: 1px solid #DADADA;
+    padding: 15px;
+    width: 100%;
+}
+
+.field {
+    margin: 10px 0;
+}
+
+.field b {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.field.float-text {
+    position: relative;
+}
+
+.field.float-text span{
+    content: '@naver.com';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    pointer-events: none;
+}
+
+.field.pw input { 
+    background: url("./images/m_icon_pw_step.png") no-repeat;
+    background-position: top 14px right -130px;
+    background-size: 160px 90px;
+}
+.field.pw.confirm input {
+    background-position: top 14px right -90px;
+}
+
+.field.birth div {
+    display: flex;
+    gap: 10px;
+}
+
+.field.tel-number div {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.field.tel-number div input[type=button] {
+    width: calc(100%/3);
+}
+
+.field.tel-number input, 
+.field.tel-number select {
+    margin-bottom: 5px;
+}
+
+.field.gender div {
+    border: 1px solid #DADADA;
+    padding: 15px 5px;
+    
+}
+
+.member-footer {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.member-footer div a:hover {
+    text-decoration: underline;
+    color: #438A01;
+}
+.member-footer div a:not(:last-child)::after {
+    content: "|";
+    margin : 0 1px 0 2.5px
+}
+
+
+
