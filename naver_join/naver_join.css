@@ -44,7 +44,7 @@ input[type=number] {
     width: calc(100vw/3);
     min-width: 400px; max-width: 500px;
     margin: auto;
-    /* padding: 0 20px; */
+    padding: 0 2 0px;
 }
 
 /* Member Sign in */
@@ -122,10 +122,31 @@ input[type=number] {
     margin-bottom: 5px;
 }
 
+.field.gender label {
+    margin:0 5px;
+}
+
 .field.gender div {
     border: 1px solid #DADADA;
     padding: 15px 5px;
     
+}
+
+.field.gender div input {
+    display: none;
+}
+
+.field.gender div input + em {
+    display: inline-block;
+    width: 18px; height: 18px;
+    background: url("./images/m_radio_step.png") no-repeat;
+    background-position: left;
+    background-size: 33px 33px;
+    transform: translateY(3px);
+}
+
+.field.gender div input:checked + em {
+    background-position: right;
 }
 
 .member-footer {
@@ -140,7 +161,22 @@ input[type=number] {
 }
 .member-footer div a:not(:last-child)::after {
     content: "|";
-    margin : 0 1px 0 2.5px
+    margin : 0 1px 0 2.5px;
+    display: inline-block;
+    transform: translateY(-1px);    /* top or left 기준으로 이동 가능 */
+}
+
+@media (max-width: 768px) {
+    .member {
+        width: 100%;
+    }
+}
+
+.test {
+   background-color: #fff;
+   font-size: 10px;
+   margin-right: 5px;
+   background-color: green;
 }
 
 
