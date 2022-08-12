@@ -1,0 +1,83 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Black Han Sans', sans-serif;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+/* Section : Hero */
+header {
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.265); */
+    background: linear-gradient(to top, black, transparent);
+}
+
+/* video는 video 플레이어가 비율이 무조건 꺠지지 않는선에서 조절된다. 
+absolute시 기본 center */
+/* 해당 px 보다 작아지면 화면크기에 맞춰 player 크기 변형됨*/
+/* header video {      
+    position: absolute;
+    width:100%;
+    min-width: 877px;       
+    z-index: -1;
+} */
+
+
+/* Using object-fit, 훨씬 간편하다, 지정한 크기에 content를 container에 맞춘다. */
+header video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* css3 spec, ie에서는 지원안됨 */
+    object-position: 50% 60%;
+}
+
+header .title {
+    text-align: center;
+    color: white;
+    width: calc(100vw*0.7);
+}
+
+header .title h1 {
+    font-weight: 500;
+    line-height: 1.6em;
+    font-size: 2em;
+}
+
+header .title h1 p {
+    color: lightsteelblue;
+}
+
+main {
+    border: 1px solid #000;
+    margin-top: 80px;
+}
+
+main section {
+    border: 1px solid #000;
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+main section article {
+
+}
+
+
+
+
+
+
+
+/* Section : Content */
