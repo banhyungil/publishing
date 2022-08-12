@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/b9d5fcd671.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    input[id=trigger] {
+      display: none;
+    }
+    label[for=trigger] {
+      position: absolute;
+      cursor: pointer;
+      top: 50%;
+      left: 10px;
+      transition: 0.3s;
+    }
+
+    input[id=trigger] + label i:nth-child(1) {
+      display: inherit;
+    }
+    input[id=trigger] + label i:nth-child(2) {
+      display: none;
+    }
+    input[id=trigger]:checked + label i:nth-child(1) {
+      display: none;
+    }
+    input[id=trigger]:checked + label i:nth-child(2) {
+      display: inherit;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      z-index: -100;
+      transition: 0.3s;
+    }
+    input[id=trigger]:checked ~ .sidebar {
+      left: 0;
+    }
+    
+    input[id=trigger]:checked + label {
+      left: 260px;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" name="" id="trigger">
+  <label for="trigger">
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-x"></i>
+  </label>
+  <div class="sidebar"></div>
+</body>
+</html>

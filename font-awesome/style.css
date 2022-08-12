@@ -1,0 +1,28 @@
+.fa-dog {       /* font 이다 */
+  color: coral;
+  font-size: 16px;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 50%;
+}
+.box {
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.box::before {
+  content: '\f0c9';   /* unicode로 가져올 수 있다 */
+  font-family: fontawesome;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+}
