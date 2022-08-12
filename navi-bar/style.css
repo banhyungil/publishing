@@ -48,8 +48,8 @@ nav > section {
 }
 
 nav .logo {
-  width:25%;
-  min-width: 76px;
+  flex: 1;
+  min-width: 100px;
 }
 
 nav .logo a .fa-html5 {
@@ -63,17 +63,19 @@ nav .logo a span {
 }
 
 nav .gnb {
-  text-align: center;
-  width:40%;
-  min-width: 351px;
+  flex: 2;
+  max-width: 500px;
+  min-width: 407px;
+  gap: 30px;
 }
 
 nav .gnb a {
-  margin: 0 5px;
   font-weight: 600;
 }
 nav .lnb {
-  width:25%;
+  flex: 1;
+  max-width: 500px;
+  min-width: 80px;
   flex-direction: row;
   justify-content: right;
 }
