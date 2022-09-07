@@ -5,11 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+    let person = {name: ''};
+    let proxyPerson;
+
+    $(document).ready(() =>{
+      const label = document.querySelector('#name');
+
+      const handlerPerson = {
+        set(target, prop, newval){
+          if(prop === 'name'){
+            label.textContent = newval;
+            target[prop] = newval;
+          }
+          return true;
+        }
+      }
+      proxyPerson = new Proxy(person, handlerPerson);
+    });
+
+    const insertData = () => {
+      proxyPerson.name = document.querySelector('#data').value;
+    }
+    
+    const insertInput = (event) => {
+      person.name = event.target.value;
+    }
+
+  </script>
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-  <div class="parent">
-    <div>child</div>
-  </div>
+  <label id="name">이름</label>
+  <hr/>
+  <label for="">데이터</label>
+  <input id='data' type="text" oninput="insertInput(event)">
+  <button onclick="insertData()">데이터입력</button>
 </body>
 </html>

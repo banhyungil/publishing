@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Noto+Sans+KR:wght@100;300&display=swap');
+
+/* Default CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6em;
+  columns: #222;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Reset CSS */
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+.font-noto {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+/* Common CSS */
+.wrap {
+  display: flex;
+  height:100vh;
+  width:100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(images/background.png) no-repeat ;
+  background-position: top right; /* 기본은 center center 이다 */
+}
+
+/* Section : Portfolio */
+.ptf-h, .ptf-m {
+  width: 100%;
+}
+
+.ptf-h {
+  flex:3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ptf-h h1 {
+  font-size: 56px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* translate %값은 block size를 기준으로 이동한다.*/
+/* margin-top은 안 먹네 왜 그러지 */
+.ptf-h h1:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 80px;
+  background: linear-gradient(to right, #1f8de6, #5ed);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);  
+  margin-bottom: -40px;         
+}
+
+.ptf-m {
+  flex:7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  margin: 30px 0;
+}
+
+.ptf-m-s {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px
+}
+
+.ptf-m-s .contents b {
+  font-weight: normal;
+  color: crimson;
+}
+
+.ptf-m-s .contents h2 {
+  font-size: 26px;
+  margin-top: 15px;
+}
+
+.ptf-m-s .contents ul {
+  list-style: square;
+  margin-left: -20px;
+}
+
+.ptf-m-s > article .photo {
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 15px 45px -10px rgba(0, 0, 0, 0.15);
+  /*
+  box-shadow CSS 속성
+  1) offset-x | offset-y | blur-radius | spread-radius | color
+  2) spread-radius : 걍수 값은 그림자가 더 커지고 확산하며, 음수 값은 그림자가 줄어듭니다.
+  3) box-shaodw를 중첩해서 사용할 경우 콤마(,)를 써서 연결합니다.
+  ex) box-shadow: 3px 3px 30px red, 6px 6px 20px blue;
+  */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  transition: 2s;
+}
+
+.ptf-m-s > article .photo:hover {
+  background-position: bottom;
+}
+
+.ptf-m-s > article:nth-of-type(2) .photo {
+  background-image: url(images/web-portfolio-01.jpg);
+}
+
+.ptf-m-s > article:nth-of-type(3) .photo {
+  background-image: url(images/web-portfolio-02.jpg);
+}
+
+.ptf-m-s > article:nth-of-type(4) .photo {
+  background-image: url(images/web-portfolio-03.jpg);
+}
+
+.ptf-m-s > article nav {
+  text-align: center;
+  margin-top: 7px;
+}
+
+/* .ptf-m-s > article nav */
+.btn-view {
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-view.pc {
+  background-color: crimson;
+}
+
+.btn-view.mobile {
+  background-color: royalblue;
+}
+
+
